@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    tools:context="thingtranslator2.jalle.com.thingtranslator2.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0.91"
+            android:gravity="bottom|right" />
+
+        <ImageButton
+            android:id="@+id/imgSpeaker"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_weight=".10"
+            android:background="@android:color/transparent"
+            android:onClick="ToogleSpeaker"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_volume" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTranslation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:onClick="getImage"
+        android:text="Select image from\n gallery or take new photo"
+        android:textColor="@android:color/white"
+        android:textSize="26dp"
+        tools:text="message" />
+
+    <ImageButton
+        android:id="@+id/imgPhoto"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/txtTranslation"
+        android:background="@drawable/takephoto"
+        android:onClick="getImage" />
+
+</RelativeLayout>
+
