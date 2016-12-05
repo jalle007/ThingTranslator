@@ -13,9 +13,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 
 public interface ApiInterface {
-    //      String ENDPOINT = "http://192.168.0.11:1337/";
-    //  String ENDPOINT = "https://rest-service1.herokuapp.com/";http://thingtranslatorapi2.apphb.com/api/upload
-    String ENDPOINT = "http://thingtranslatorapi2.apphb.com/api/";
+    
+    String ENDPOINT = "http://YOUR-API-URL/api/";
 
     @Multipart
     @POST("upload")
